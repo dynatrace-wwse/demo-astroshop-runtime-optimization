@@ -12,8 +12,25 @@
 
 ___
 
-## WIP
 
+
+<!-- 
+TODOs and Notes to self:
+
+[ ] - Deploy problem patterns 
+[ ] - Add Monaco conf
+[ ] - Codify the JMeter Loadtests
+[ ] - Schedule the JMeter Loadtests
+[ ] - Add documentation, RUM for Mkdocs
+[ ] - Add Gitlab?
+[ ] - Upgrade to latest Astroshop of demo.live
+
+Session stored here: https://github.com/dynatrace-ace/perform-2025-hot-dynatrace-for-developers
+Otel shop here: https://github.com/dynatrace-wwse/opentelemetry-demo/
+
+
+-->
+## WIP
 
 This repository contains the Astroshop and Problem Patterns showcased in Perform 2024 for Developer Observability. 
 
