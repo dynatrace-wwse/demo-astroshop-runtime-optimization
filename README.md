@@ -1,0 +1,34 @@
+<!-- markdownlint-disable-next-line -->
+# <img src="https://cdn.bfldr.com/B686QPH3/at/w5hnjzb32k5wcrcxnwcx4ckg/Dynatrace_signet_RGB_HTML.svg?auto=webp&format=pngg" alt="DT logo" width="30"> Demo Runtime Optimization Problem patterns with Astroshop
+
+[![Davis CoPilot](https://img.shields.io/badge/Davis%20CoPilot-AI%20Powered-purple?logo=dynatrace&logoColor=white)](https://dynatrace-wwse.github.io/codespaces-framework/dynatrace-integration/#mcp-server-integration)
+[![dt-badge](https://img.shields.io/badge/Powered_by-DT_Enablement-8A2BE2?logo=dynatrace)](https://dynatrace-wwse.github.io/codespaces-framework/)
+[![Downloads](https://img.shields.io/docker/pulls/shinojosa/dt-enablement?logo=docker)](https://hub.docker.com/r/shinojosa/dt-enablement)
+![Integration tests](https://github.com/dynatrace-wwse/demo-astroshop-runtime-optimization/actions/workflows/integration-tests.yaml/badge.svg)
+[![Version](https://img.shields.io/github/v/release/dynatrace-wwse/demo-astroshop-runtime-optimization?color=blueviolet)](https://github.com/dynatrace-wwse/demo-astroshop-runtime-optimization/releases)
+[![Commits](https://img.shields.io/github/commits-since/dynatrace-wwse/demo-astroshop-runtime-optimization/latest?color=ff69b4&include_prereleases)](https://github.com/dynatrace-wwse/demo-astroshop-runtime-optimization/graphs/commit-activity)
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg?color=green)](https://github.com/dynatrace-wwse/demo-astroshop-runtime-optimization/blob/main/LICENSE)
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-green)](https://dynatrace-wwse.github.io/demo-astroshop-runtime-optimization/)
+
+___
+
+## WIP
+
+
+This repository contains the Astroshop and Problem Patterns showcased in Perform 2024 for Developer Observability. 
+
+Runtime Optimization
+
+- CPU
+- Memory Analysis
+- Thread Analysis
+
+
+
+
+<p align="center">
+<img src="docs/img/fixing_code.png" alt="AI-Powered Security Analysis" width="600"/>
+</p>
+
+## [👨‍🏫 Learn how the Dynatrace MCP Server can help you be more efficient!](https://dynatrace-wwse.github.io/demo-astroshop-runtime-optimization)
+
