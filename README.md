@@ -24,11 +24,5 @@ Runtime Optimization
 - Thread Analysis
 
 
-
-
-<p align="center">
-<img src="docs/img/fixing_code.png" alt="AI-Powered Security Analysis" width="600"/>
-</p>
-
-## [👨‍🏫 Learn how the Dynatrace MCP Server can help you be more efficient!](https://dynatrace-wwse.github.io/demo-astroshop-runtime-optimization)
+## [👨‍🏫 Learn how you can optimize runtime with Dynatrace!](https://dynatrace-wwse.github.io/demo-astroshop-runtime-optimization)
 
