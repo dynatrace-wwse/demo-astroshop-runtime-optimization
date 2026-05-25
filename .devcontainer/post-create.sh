@@ -6,13 +6,13 @@ source .devcontainer/util/source_framework.sh
 setUpTerminal
 
 
-startKindCluster
+startK3dCluster
 
 installK9s
 
 dynatraceDeployOperator
 
-deployCloudNative
+deployApplicationMonitoring
 
 deployApp astroshop
 
