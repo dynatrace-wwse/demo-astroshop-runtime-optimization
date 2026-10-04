@@ -1,3 +1,8 @@
+---
+tags:
+  - classic
+---
+
 
 --8<-- "snippets/disclaimer.md"
 
