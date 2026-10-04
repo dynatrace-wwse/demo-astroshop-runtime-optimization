@@ -6,6 +6,8 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="Work in progress, migrating the Astroshop CI/CD pipelines into this repository. Runs the Astroshop with CPU, memory and N+1 problem patterns on a Kubernetes cluster monitored by Dynatrace, to show how to optimize application runtime.">
+      
       
       
       
@@ -79,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#mcp-powered-security-analysis-with-unguard" class="md-skip">
+        <a href="#astroshop-runtime-optimization" class="md-skip">
           Skip to content
         </a>
       
@@ -272,17 +274,6 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    1. About
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="." class="md-nav__link md-nav__link--active">
         
   
@@ -292,61 +283,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#what-youll-learn" class="md-nav__link">
-    <span class="md-ellipsis">
-      🎯 What You'll Learn
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#about-unguard" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔍 About Unguard
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#the-power-of-mcp" class="md-nav__link">
-    <span class="md-ellipsis">
-      🤖 The Power of MCP
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-youll-do" class="md-nav__link">
-    <span class="md-ellipsis">
-      🚀 What You'll Do
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -379,31 +315,11 @@
   
   
     <li class="md-nav__item">
-      <a href="3-demo/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    3. Demo
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="cleanup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    4. Cleanup
+    3. Cleanup
   </span>
   
 
@@ -423,7 +339,7 @@
         
   
   <span class="md-ellipsis">
-    5. Resources
+    4. Resources
   </span>
   
 
@@ -443,7 +359,7 @@
         
   
   <span class="md-ellipsis">
-    6. What's next?
+    5. What's next?
   </span>
   
 
@@ -472,50 +388,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#what-youll-learn" class="md-nav__link">
-    <span class="md-ellipsis">
-      🎯 What You'll Learn
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#about-unguard" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔍 About Unguard
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#the-power-of-mcp" class="md-nav__link">
-    <span class="md-ellipsis">
-      🤖 The Power of MCP
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-youll-do" class="md-nav__link">
-    <span class="md-ellipsis">
-      🚀 What You'll Do
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -532,6 +404,12 @@
   
 
 
+<div class="admonition warning">
+<p class="admonition-title">Work in progress</p>
+<p>This repository is <strong>work in progress</strong>. We are migrating the Astroshop CI/CD pipelines into
+it, and it is where we are building out how to <strong>optimize the runtime</strong> of an application with
+Dynatrace. Expect pages and functions to change.</p>
+</div>
 <div class="admonition example">
 <p class="admonition-title">Support Policy - experiment, share feedback, and help shape the future</p>
 <p>This repository is part of an enablement project created by the Center of Excellence at Dynatrace. Our mission is to empower you to explore and adopt these resources to accelerate innovation.
@@ -543,66 +421,19 @@ Support is community-driven and provided exclusively via <a href="https://github
 </ul>
 <p>We encourage you to experiment, <a href="https://forms.office.com/r/QaCx6VAJe8">share feedback</a>, and help shape the future. Start building today!</p>
 </div>
-<h1 id="mcp-powered-security-analysis-with-unguard">MCP-Powered Security Analysis with Unguard<a class="headerlink" href="#mcp-powered-security-analysis-with-unguard" title="Permanent link">#</a></h1>
-<div class="admonition warning">
-<p class="admonition-title">Not yet migrated to the Dynatrace Enablement App</p>
-<p>This content has not been migrated to a fully immersive, interactive and self-service training.
-Questions or feedback? Reach out to the Center of Excellence Enablement Team via
-<a href="https://github.com/dynatrace-wwse/codespaces-framework/issues">GitHub Issues</a>
-or the <a href="https://forms.office.com/r/QaCx6VAJe8">feedback form</a>.</p>
-</div>
-<p>Welcome to this hands-on tutorial where you'll learn how to leverage the <strong>Model Context Protocol (MCP)</strong> with AI agents to analyze, detect, and remediate security vulnerabilities in a real-world application.</p>
-<h2 id="what-youll-learn">🎯 What You'll Learn<a class="headerlink" href="#what-youll-learn" title="Permanent link">#</a></h2>
-<p>In this tutorial, you'll discover how to:</p>
+<h1 id="astroshop-runtime-optimization">Astroshop Runtime Optimization<a class="headerlink" href="#astroshop-runtime-optimization" title="Permanent link">#</a></h1>
+<p>This repository deploys the <strong>Astroshop</strong> — Dynatrace's build of the OpenTelemetry demo web shop —
+on a local Kubernetes (<a href="https://k3d.io/" target="_blank">k3d</a>) cluster monitored by Dynatrace. It
+carries the problem patterns shown at Perform 2024 for developer observability, so you can analyze
+the runtime of a service in Dynatrace:</p>
 <ul>
-<li><strong>Connect to MCP Servers</strong> and interact with AI agents through the Model Context Protocol</li>
-<li><strong>Analyze vulnerable code</strong> in the Unguard application using AI-powered code analysis</li>
-<li><strong>Query Dynatrace insights</strong> to correlate code vulnerabilities with runtime security findings</li>
-<li><strong>Interact with Davis CoPilot</strong> for intelligent security recommendations</li>
-<li><strong>Automatically remediate vulnerabilities</strong> with AI-assisted code fixes</li>
-<li><strong>Access observability data</strong> including logs, metrics, traces, and security events</li>
+<li>CPU analysis</li>
+<li>Memory analysis</li>
+<li>Thread analysis</li>
 </ul>
-<h2 id="about-unguard">🔍 About Unguard<a class="headerlink" href="#about-unguard" title="Permanent link">#</a></h2>
-<p><strong>Unguard</strong> is an intentionally insecure cloud-native microservices application designed for security training and testing. It consists of eight microservices written in different languages (Java, .NET, Python, Node.js, PHP, Go, Next.js) and encompasses real-world vulnerabilities including:</p>
-<ul>
-<li>Server-Side Request Forgery (SSRF)</li>
-<li>SQL Injection</li>
-<li>Command Injection</li>
-<li>JWT Key Confusion</li>
-<li>Remote Code Execution (RCE)</li>
-<li>And many more security flaws</li>
-</ul>
-<p>This makes it the perfect environment to learn how AI agents can help identify and fix security issues in production-like code.</p>
-<h2 id="the-power-of-mcp">🤖 The Power of MCP<a class="headerlink" href="#the-power-of-mcp" title="Permanent link">#</a></h2>
-<p>The Model Context Protocol enables AI agents to:</p>
-<ul>
-<li>Access and analyze your codebase directly</li>
-<li>Connect to Dynatrace monitoring data in real-time</li>
-<li>Execute queries across logs, metrics, and security findings</li>
-<li>Provide actionable recommendations based on both code and runtime context</li>
-<li>Automate vulnerability remediation with precision</li>
-</ul>
-<p align="center">
-  <img src="img/fixing_code.png" alt="AI-Powered Code Analysis" width="600">
-</p>
-
-<h2 id="what-youll-do">🚀 What You'll Do<a class="headerlink" href="#what-youll-do" title="Permanent link">#</a></h2>
-<p>Throughout this tutorial, you will:</p>
-<ol>
-<li>Connect to the MCP server using your credentials</li>
-<li>Interact with the AI agent to explore the Unguard application</li>
-<li>Identify security vulnerabilities in the code</li>
-<li>Correlate code issues with runtime security findings from Dynatrace</li>
-<li>Use the agent to automatically fix vulnerabilities</li>
-<li>Generate executive summaries of security remediations</li>
-</ol>
-<div class="admonition tip">
-<p class="admonition-title">Ready to Start?</p>
-<p>Let's begin by checking the prerequisites and connecting to the MCP server!</p>
-</div>
 <div class="grid cards">
 <ul>
-<li><a href="2-getting-started/">Check Prerequisites <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span></a></li>
+<li><a href="2-getting-started/">Let's begin <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span></a></li>
 </ul>
 </div>
 
@@ -611,6 +442,9 @@ or the <a href="https://forms.office.com/r/QaCx6VAJe8">feedback form</a>.</p>
 
 
 
+
+  
+  
 
 
 

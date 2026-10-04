@@ -12,7 +12,7 @@
         <link rel="prev" href="..">
       
       
-        <link rel="next" href="../3-demo/">
+        <link rel="next" href="../cleanup/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -81,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#getting-started" class="md-skip">
+        <a href="#1-launch-the-codespace" class="md-skip">
           Skip to content
         </a>
       
@@ -291,8 +291,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -321,8 +319,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -331,18 +327,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#required-access" class="md-nav__link">
+  <a href="#1-launch-the-codespace" class="md-nav__link">
     <span class="md-ellipsis">
-      Required Access
+      1. Launch the Codespace
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-youll-get-access-to" class="md-nav__link">
+  <a href="#2-roll-out-a-problem-pattern" class="md-nav__link">
     <span class="md-ellipsis">
-      What You'll Get Access To
+      2. Roll out a problem pattern
     </span>
   </a>
   
@@ -363,31 +359,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../3-demo/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    3. Demo
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../cleanup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    4. Cleanup
+    3. Cleanup
   </span>
   
 
@@ -407,7 +383,7 @@
         
   
   <span class="md-ellipsis">
-    5. Resources
+    4. Resources
   </span>
   
 
@@ -427,7 +403,7 @@
         
   
   <span class="md-ellipsis">
-    6. What's next?
+    5. What's next?
   </span>
   
 
@@ -453,8 +429,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -463,18 +437,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#required-access" class="md-nav__link">
+  <a href="#1-launch-the-codespace" class="md-nav__link">
     <span class="md-ellipsis">
-      Required Access
+      1. Launch the Codespace
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-youll-get-access-to" class="md-nav__link">
+  <a href="#2-roll-out-a-problem-pattern" class="md-nav__link">
     <span class="md-ellipsis">
-      What You'll Get Access To
+      2. Roll out a problem pattern
     </span>
   </a>
   
@@ -498,25 +472,70 @@
   
 
 
-<h1 id="getting-started">Getting started<a class="headerlink" href="#getting-started" title="Permanent link">#</a></h1>
-<p>Before you begin working with the MCP-enabled agent, you'll need to tell the agent to which Dynatrace environment it should connect to. The MCP Server supports SSO via VS Code Desktop and Web 🚀.</p>
+  <h1>2. Getting started</h1>
+
 <div class="admonition info">
-<p class="admonition-title">Playground as default environment</p>
-<p>By default if no environment is set, the DT_ENVIRONMENT variable will point to the playground <a href="https://wkf10640.apps.dynatrace.com">https://wkf10640.apps.dynatrace.com</a></p>
-</div>
-<h2 id="required-access">Required Access<a class="headerlink" href="#required-access" title="Permanent link">#</a></h2>
-<p>You need access to a Dynatrace environment, if not, <a href="https://dt-url.net/trial" target="_blank">create a Free Trial - sign up here</a>) which will allow you also access to the Playground environment.</p>
-<h2 id="what-youll-get-access-to">What You'll Get Access To<a class="headerlink" href="#what-youll-get-access-to" title="Permanent link">#</a></h2>
-<p>Once connected to the MCP server, you'll be able to:</p>
+<p class="admonition-title">Requirements</p>
 <ul>
-<li><strong>Analyze code</strong> in the repository using the AI agent</li>
-<li><strong>Query Dynatrace insights</strong> from the monitoring tenant</li>
-<li><strong>Get real-time observability data</strong> to understand application behavior</li>
-<li><strong>Interact with Davis CoPilot</strong> for intelligent problem analysis</li>
+<li>A <strong>Grail enabled Dynatrace SaaS Tenant</strong> (<a href="https://dt-url.net/trial" target="_blank">sign up here</a>).</li>
+<li>A <strong>GitHub account</strong> to interact with the demo repository.</li>
 </ul>
+</div>
+<h2 id="1-launch-the-codespace">1. Launch the Codespace<a class="headerlink" href="#1-launch-the-codespace" title="Permanent link">#</a></h2>
+<p><a href="https://codespaces.new/dynatrace-wwse/demo-astroshop-runtime-optimization" target="_blank"><img alt="Open in GitHub Codespaces" src="https://github.com/codespaces/badge.svg" /></a></p>
+<div class="admonition tip">
+<p class="admonition-title">Machine size &amp; secrets</p>
+<ul>
+<li>Choose a machine with at least <strong>4 cores</strong>.</li>
+<li><code>DT_ENVIRONMENT</code> — the URL of your Dynatrace environment, e.g. <code>https://abc123.apps.dynatrace.com</code></li>
+<li><code>DT_OPERATOR_TOKEN</code> — the Dynatrace Operator token (required)</li>
+<li><code>DT_INGEST_TOKEN</code> — an ingest token (optional)</li>
+</ul>
+</div>
+<p>While the Codespace is created, <code>.devcontainer/post-create.sh</code>:</p>
+<ol>
+<li>checks that the Dynatrace secrets are set, and stops if a required one is missing,</li>
+<li>starts a local k3d Kubernetes cluster and installs <code>k9s</code>,</li>
+<li>deploys the Dynatrace Operator in application monitoring mode,</li>
+<li>deploys the Astroshop, <strong>with no problem pattern</strong> active.</li>
+</ol>
+<p>Run <code>printGreeting</code> in the terminal to see the Astroshop URL.</p>
+<h2 id="2-roll-out-a-problem-pattern">2. Roll out a problem pattern<a class="headerlink" href="#2-roll-out-a-problem-pattern" title="Permanent link">#</a></h2>
+<p>Each function rolls out an Astroshop version that carries one problem pattern. Then open the
+affected service in Dynatrace and analyze its runtime.</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Astroshop version</th>
+<th>Problem pattern</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>deployCpuProblem</code></td>
+<td>1.12.1</td>
+<td>CPU</td>
+</tr>
+<tr>
+<td><code>deployMemoryProblem</code></td>
+<td>1.12.2</td>
+<td>Memory</td>
+</tr>
+<tr>
+<td><code>deployNplusOneProblem</code></td>
+<td>1.12.3</td>
+<td>N+1 calls</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Work in progress</p>
+<p>The load test function <code>doLoadtest</code> is not working yet.</p>
+</div>
 <div class="grid cards">
 <ul>
-<li><a href="../3-demo/">Let's continue <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span></a></li>
+<li><a href="../cleanup/">Cleanup <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span></a></li>
 </ul>
 </div>
 
@@ -573,13 +592,13 @@
         
         
           
-          <a href="../3-demo/" class="md-footer__link md-footer__link--next" aria-label="Next: 3. Demo">
+          <a href="../cleanup/" class="md-footer__link md-footer__link--next" aria-label="Next: 3. Cleanup">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                3. Demo
+                3. Cleanup
               </div>
             </div>
             <div class="md-footer__button md-icon">
