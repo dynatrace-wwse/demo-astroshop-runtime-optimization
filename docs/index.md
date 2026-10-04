@@ -1,68 +1,30 @@
+---
+description: Work in progress, migrating the Astroshop CI/CD pipelines into this repository. Runs the Astroshop with CPU, memory and N+1 problem patterns on a Kubernetes cluster monitored by Dynatrace, to show how to optimize application runtime.
+tags:
+  - classic
+  - work-in-progress
+  - kubernetes
+  - runtime-optimization
+---
+
+!!! warning "Work in progress"
+    This repository is **work in progress**. We are migrating the Astroshop CI/CD pipelines into
+    it, and it is where we are building out how to **optimize the runtime** of an application with
+    Dynatrace. Expect pages and functions to change.
 
 --8<-- "snippets/disclaimer.md"
 
-# MCP-Powered Security Analysis with Unguard
+# Astroshop Runtime Optimization
 
-!!! warning "Not yet migrated to the Dynatrace Enablement App"
-    This content has not been migrated to a fully immersive, interactive and self-service training.
-    Questions or feedback? Reach out to the Center of Excellence Enablement Team via
-    [GitHub Issues](https://github.com/dynatrace-wwse/codespaces-framework/issues)
-    or the [feedback form](https://forms.office.com/r/QaCx6VAJe8).
+This repository deploys the **Astroshop** — Dynatrace's build of the OpenTelemetry demo web shop —
+on a local Kubernetes ([k3d](https://k3d.io/){target="_blank"}) cluster monitored by Dynatrace. It
+carries the problem patterns shown at Perform 2024 for developer observability, so you can analyze
+the runtime of a service in Dynatrace:
 
-Welcome to this hands-on tutorial where you'll learn how to leverage the **Model Context Protocol (MCP)** with AI agents to analyze, detect, and remediate security vulnerabilities in a real-world application.
-
-## 🎯 What You'll Learn
-
-In this tutorial, you'll discover how to:
-
-- **Connect to MCP Servers** and interact with AI agents through the Model Context Protocol
-- **Analyze vulnerable code** in the Unguard application using AI-powered code analysis
-- **Query Dynatrace insights** to correlate code vulnerabilities with runtime security findings
-- **Interact with Davis CoPilot** for intelligent security recommendations
-- **Automatically remediate vulnerabilities** with AI-assisted code fixes
-- **Access observability data** including logs, metrics, traces, and security events
-
-## 🔍 About Unguard
-
-**Unguard** is an intentionally insecure cloud-native microservices application designed for security training and testing. It consists of eight microservices written in different languages (Java, .NET, Python, Node.js, PHP, Go, Next.js) and encompasses real-world vulnerabilities including:
-
-- Server-Side Request Forgery (SSRF)
-- SQL Injection
-- Command Injection
-- JWT Key Confusion
-- Remote Code Execution (RCE)
-- And many more security flaws
-
-This makes it the perfect environment to learn how AI agents can help identify and fix security issues in production-like code.
-
-## 🤖 The Power of MCP
-
-The Model Context Protocol enables AI agents to:
-
-- Access and analyze your codebase directly
-- Connect to Dynatrace monitoring data in real-time
-- Execute queries across logs, metrics, and security findings
-- Provide actionable recommendations based on both code and runtime context
-- Automate vulnerability remediation with precision
-
-<p align="center">
-  <img src="img/fixing_code.png" alt="AI-Powered Code Analysis" width="600">
-</p>
-
-## 🚀 What You'll Do
-
-Throughout this tutorial, you will:
-
-1. Connect to the MCP server using your credentials
-2. Interact with the AI agent to explore the Unguard application
-3. Identify security vulnerabilities in the code
-4. Correlate code issues with runtime security findings from Dynatrace
-5. Use the agent to automatically fix vulnerabilities
-6. Generate executive summaries of security remediations
-
-!!! tip "Ready to Start?"
-    Let's begin by checking the prerequisites and connecting to the MCP server!
+- CPU analysis
+- Memory analysis
+- Thread analysis
 
 <div class="grid cards" markdown>
-- [Check Prerequisites :octicons-arrow-right-24:](2-getting-started.md)
-
+- [Let's begin :octicons-arrow-right-24:](2-getting-started.md)
+</div>
