@@ -1,28 +1,38 @@
+--8<-- "snippets/grail-requirements.md"
 
-# Getting started
+## 1. Launch the Codespace
 
-Before you begin working with the MCP-enabled agent, you'll need to tell the agent to which Dynatrace environment it should connect to. The MCP Server supports SSO via VS Code Desktop and Web 🚀.
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/dynatrace-wwse/demo-astroshop-runtime-optimization){target="_blank"}
 
+!!! tip "Machine size & secrets"
+    - Choose a machine with at least **4 cores**.
+    - `DT_ENVIRONMENT` — the URL of your Dynatrace environment, e.g. `https://abc123.apps.dynatrace.com`
+    - `DT_OPERATOR_TOKEN` — the Dynatrace Operator token (required)
+    - `DT_INGEST_TOKEN` — an ingest token (optional)
 
-!!! info "Playground as default environment"
-    By default if no environment is set, the DT_ENVIRONMENT variable will point to the playground [https://wkf10640.apps.dynatrace.com](https://wkf10640.apps.dynatrace.com)
+While the Codespace is created, `.devcontainer/post-create.sh`:
 
+1. checks that the Dynatrace secrets are set, and stops if a required one is missing,
+2. starts a local k3d Kubernetes cluster and installs `k9s`,
+3. deploys the Dynatrace Operator in application monitoring mode,
+4. deploys the Astroshop, **with no problem pattern** active.
 
-## Required Access
-You need access to a Dynatrace environment, if not, [create a Free Trial - sign up here](https://dt-url.net/trial){target="_blank"}) which will allow you also access to the Playground environment.
+Run `printGreeting` in the terminal to see the Astroshop URL.
 
+## 2. Roll out a problem pattern
 
+Each function rolls out an Astroshop version that carries one problem pattern. Then open the
+affected service in Dynatrace and analyze its runtime.
 
-## What You'll Get Access To
+| Function | Astroshop version | Problem pattern |
+|---|---|---|
+| `deployCpuProblem` | 1.12.1 | CPU |
+| `deployMemoryProblem` | 1.12.2 | Memory |
+| `deployNplusOneProblem` | 1.12.3 | N+1 calls |
 
-Once connected to the MCP server, you'll be able to:
-
-- **Analyze code** in the repository using the AI agent
-- **Query Dynatrace insights** from the monitoring tenant
-- **Get real-time observability data** to understand application behavior
-- **Interact with Davis CoPilot** for intelligent problem analysis
+!!! note "Work in progress"
+    The load test function `doLoadtest` is not working yet.
 
 <div class="grid cards" markdown>
-- [Let's continue :octicons-arrow-right-24:](3-demo.md)
+- [Cleanup :octicons-arrow-right-24:](cleanup.md)
 </div>
-
